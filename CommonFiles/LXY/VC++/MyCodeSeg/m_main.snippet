@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>C++控制台main函数</Title>
+			<Shortcut>ccmian</Shortcut> 
+			<Description>C++控制台的main函数的模板</Description>
+			<Author>廖星宇</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+      <Declarations>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>宏定义名字</ToolTip>
+          <Default>Test</Default>
+        </Literal>
+      </Declarations>
+			<Code Language="cpp">
+        <![CDATA[
+#if !defined($name$)
+#define $name$ 1
+
+#if $name$ == 1
+#include <iostream>
+using namespace std;
+int main()
+{
+
+	cin.get();
+	return 0;
+}
+#endif // $name$ == 1
+
+#endif]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,18 @@
+;run 
+;sub rsp, 0x28
+sto	
+;call xxxx
+sto	
+;add rsp, 0x28
+sto 
+;jmp 0x0000000140001194
+
+find rip,"440FB7CE4C8BC033D2488BCFE8"
+
+mov addr_main,$result
+add addr_main,C
+
+go addr_main
+sti
+
+ret

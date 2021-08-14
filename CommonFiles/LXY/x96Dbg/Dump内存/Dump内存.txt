@@ -1,0 +1,10 @@
+bd
+;禁用所有断点
+
+savedata :memdump:,0x19b000,0x6000
+savedata :memdump:,0x401000,0x1000
+savedata :memdump:,0x402000,0x1000
+savedata :memdump:,0x403000,0x1000
+savedata :memdump:,0x406000,0x5AA000
+
+ret

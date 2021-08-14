@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>WindowsCUI注册程序退出处理程序</Title>
+			<Shortcut>lxyexithandlerWinConsole</Shortcut>
+			<Description>注册程序退出处理程序 对于Win控制台程序</Description>
+			<Author>廖星宇</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+        <![CDATA[BOOL WINAPI ConsoleHandler(DWORD dwEventCode/*控制事件类型*/)
+{
+	/*
+	TRL_CLOSE_EVENT, CTRL_LOGOFF_EVENT和CTRL_SHUTDOWN_EVENT通常被用来处理一些程序的清理工作，
+	然后调用ExitProcess API。
+	另外，这三个事件有超时机制，CTRL_CLOSE_EVENT是5秒，另外两个是20秒。
+	如果程序超时候，系统将会弹出结束进程的对话框。如果用户选择了结束进程，任何清理工作都不会做，所以应该在超时时间内完成工作
+	*/
+	switch (dwEventCode)
+	{
+		case CTRL_C_EVENT://当用户按下了CTRL+C,或者由GenerateConsoleCtrlEvent API发出
+		{
+			LXY::m_PrintMessageBox("ConsoleEvent", "CTRL+C received!");
+		}break;
+
+		case CTRL_BREAK_EVENT://用户按下CTRL+BREAK, 或者由GenerateConsoleCtrlEvent API发出.
+		{
+			LXY::m_PrintMessageBox("ConsoleEvent", "CTRL+BREAK received!"); 
+		}break;
+
+		case CTRL_CLOSE_EVENT://当试图关闭控制台程序，系统发送关闭消息。
+		{
+			LXY::m_PrintMessageBox("ConsoleEvent", "Program being closed!"); 
+		}break;
+
+		case CTRL_LOGOFF_EVENT://用户退出时，但是不能决定是哪个用户. 
+		{
+			LXY::m_PrintMessageBox("ConsoleEvent", "User is logging off!");
+		}break;
+
+		case CTRL_SHUTDOWN_EVENT://当系统被关闭时.  
+		{
+			LXY::m_PrintMessageBox("ConsoleEvent", "Windows is going to shutdown!"); 
+		}break;
+	default:
+		break;
+	}
+
+	return TRUE;
+}
+/*返回值为BOOL 标识是否成功*/
+SetConsoleCtrlHandler(ConsoleHandler/*注册的控制管理历程*/, true/*表示添加还是删除 true表示添加*/);//#include <Windows.h>
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
