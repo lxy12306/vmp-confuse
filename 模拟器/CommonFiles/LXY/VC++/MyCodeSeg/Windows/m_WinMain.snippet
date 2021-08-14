@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>C++WinMain函数</Title>
+			<Shortcut>lxyWinMian</Shortcut> 
+			<Description>C++WinMain函数的模板</Description>
+			<Author>廖星宇</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+      <Declarations>
+      </Declarations>
+			<Code Language="cpp">
+        <![CDATA[
+#include "F:\Code\object\WinUserHandle\MyWinHwnd.h"
+#include <windowsx.h>
+#include "resource.h"
+#include <tchar.h>
+
+///////////////////////////////////////////////////////////////////////////////
+#define ESM_POKECODEANDLOOKUP    (WM_USER + 100) //自定义消息
+
+///////////////////////////////////////////////////////////////////////////////
+/// <summary>
+/// Dlg初始化的时候干的事情
+/// </summary>
+/// <param name="hwnd">窗口句柄</param>
+/// <param name="hwndFocus">初始默认Focus的控件句柄</param>
+/// <param name="lParam">参数</param>
+/// <returns>是否初始化成功</returns>
+BOOL Dlg_OnInitDialog(HWND hwnd, HWND hwndFocus, LPARAM lParam) 
+{
+
+    return(TRUE);
+}
+//////////////////////////////////////////////////////////////////////////////
+/// <summary>
+/// 窗口控件的处理函数
+/// </summary>
+/// <param name="hwnd">窗口句柄</param>
+/// <param name="id">控件ID</param>
+/// <param name="hwndCtl">控件句柄</param>
+/// <param name="codeNotify">默认为0</param>
+void Dlg_OnCommand(HWND hwnd, int id, HWND hwndCtl, UINT codeNotify) 
+{
+    switch (id) {
+
+    case IDCANCEL:
+        EndDialog(hwnd, id);
+        break;
+
+    case IDOK:
+        break;
+    }
+}
+///////////////////////////////////////////////////////////////////////////////
+INT_PTR WINAPI Dlg_Proc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
+{
+    switch (uMsg) {
+        lxy_HANDLE_DLGMSG(hwnd, WM_INITDIALOG, Dlg_OnInitDialog);//在此截获WM_INITDIALOG消息，进入Dlg初始化函数Dlg_OnInitDialog  
+        lxy_HANDLE_DLGMSG(hwnd, WM_COMMAND, Dlg_OnCommand);////在此截获WM_COMMAND消息，在Dlg_OnCommand函数中统一处理
+    }
+    return FALSE;
+}
+///////////////////////////////////////////////////////////////////////////////
+int WINAPI _tWinMain(HINSTANCE hinstExe, HINSTANCE, PTSTR pszCmdLine, int) {
+
+    HWND hwnd = FindWindow(TEXT("#32770")/*窗口类型*/, TEXT("Dialog")/*窗口名*/);
+    /*寻找是否已经有一个窗口存在了*/
+
+    if (IsWindow(hwnd)) {
+        // 已经有一个窗口存在了 怎么处理 
+        return 0;
+    }
+    else {
+        DialogBoxParam(hinstExe, MAKEINTRESOURCE(IDD_DIALOGWinMain)/*对话框模板 一般是窗口资源ID 或者路径名 */,
+            NULL/*拥有对话框的窗口的句柄*/, Dlg_Proc/*窗口处理函数*/, NULL/*传入给窗口处理函数的参数*/);
+    }
+    return 0;
+}
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

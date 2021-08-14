@@ -1,0 +1,51 @@
+0: lea esi, [esi - 1]                   
+<esi_r><esi_w>
+1: movzx ecx, byte ptr [esi]            
+<ecx_w><esi_r><mem_r>
+3: xor cl, bl                           
+<bl_r><cl_r><cl_w>
+5: add cl, 0xd2                         
+<cl_r><cl_w>
+6: neg cl                               
+<cl_r><cl_w>
+9: rol cl, 1                            
+<cl_r><cl_w>
+13: add cl, 0x92                        
+<cl_r><cl_w>
+14: xor bl, cl                          
+<bl_r><bl_w><cl_r>
+17: mov dx, word ptr [esp + ecx]        
+<dx_w><ecx_r><esp_r><mem_r>
+21: sub edi, 2                          
+<edi_r><edi_w>
+24: mov word ptr [edi], dx              
+<dx_r><edi_r><mem_w>
+25: lea esi, [esi - 4]                  
+<esi_r><esi_w>
+27: mov eax, dword ptr [esi]            
+<eax_w><esi_r><mem_r>
+28: xor eax, ebx                        
+<eax_r><eax_w><ebx_r>
+29: dec eax                             
+<eax_r><eax_w>
+31: rol eax, 3                          
+<eax_r><eax_w>
+34: add eax, 0x459146af                 
+<eax_r><eax_w>
+37: rol eax, 3                          
+<eax_r><eax_w>
+40: xor eax, 0xa7055db                  
+<eax_r><eax_w>
+42: rol eax, 1                          
+<eax_r><eax_w>
+44: bswap eax                           
+<eax_r><eax_w>
+46: xor ebx, eax                        
+<eax_r><ebx_r><ebx_w>
+48: add ebp, eax                        
+<eax_r><ebp_r><ebp_w>
+51: lea ecx, [esp + 0x60]               
+<ecx_w><esp_r>
+53: cmp edi, ecx                        
+<ecx_r><edi_r><eflag_w>
+end:: jmp ebp                           

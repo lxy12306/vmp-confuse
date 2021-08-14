@@ -1,0 +1,10 @@
+0: mov edx, dword ptr [edi]             
+<edi_r><edx_w><mem_r>
+1: mov cx, word ptr ss:[edx]            
+<cx_w><edx_r><mem_r>
+5: add edi, 2                           
+<edi_r><edi_w>
+6: mov word ptr [edi], cx               
+<cx_r><edi_r><mem_w>
+27: xor ebx, ecx                        
+<ebx_r><ebx_w><ecx_r>

@@ -1,0 +1,167 @@
+
+
+bp 0x00486942
+run
+run 
+;到达了0x00486942及VMP虚拟化之后的入口点
+bd
+;禁用所有断点
+
+
+alloc 0x1000,0
+pMyMem = $result
+pTemp = pMyMem
+
+mov [pTemp],eax
+pTemp+=4
+mov [pTemp],ecx
+pTemp+=4
+mov [pTemp],edx
+pTemp+=4
+mov [pTemp],ebx
+pTemp+=4
+mov [pTemp],esp
+pTemp+=4
+mov [pTemp],ebp
+pTemp+=4
+mov [pTemp],esi
+pTemp+=4
+mov [pTemp],edi
+pTemp+=4
+mov [pTemp],eip
+pTemp+=4
+mov [pTemp],eflags
+pTemp+=4
+
+
+
+push eax
+
+dwPEDosHeader = 0x400000
+dwPEPEHeader = 0
+dwPEQuKuaiBiao = 0
+dwPEQuKuaiShuLiang = 0
+mov eax,[dwPEDosHeader+0x3c]
+add eax,dwPEDosHeader
+mov dwPEPEHeader,eax
+xor eax,eax
+mov ax,[dwPEPEHeader+0x6]
+mov dwPEQuKuaiShuLiang,eax
+mov ax,[dwPEPEHeader+0x14]
+add eax,dwPEPEHeader
+add eax,0x18
+mov dwPEQuKuaiBiao,eax
+
+
+pop eax
+
+
+dwVirtualAddress = 0
+dwVirtualSize = 0
+push eax
+push ecx
+push edx
+push ebx
+push eflags
+mov ecx,dwPEQuKuaiShuLiang
+
+add ecx,2
+mov [pTemp],ecx
+pTemp+=4
+sub ecx,2
+;还有线程堆栈 线程结构体所在地区
+
+Begin:
+test ecx,ecx
+je end
+	mov eax,[dwPEQuKuaiBiao+0xc] 
+	add eax,dwPEDosHeader
+	mov dwVirtualAddress,eax
+	mov eax,[dwPEQuKuaiBiao+0x8]
+
+	mov edx,0xfff
+	and edx,eax
+	
+	mov ebx,0x1000
+	div eax,ebx
+
+	mov ebx,edx
+	shr ebx,31
+	not edx
+	inc edx
+	shr edx,31
+	not edx
+	inc edx
+	or ebx,edx
+
+	and ebx,1
+	add eax,ebx
+	
+	mul eax,0x1000
+	mov dwVirtualSize,eax
+	mov eax,dwVirtualAddress
+	mov [pTemp],eax
+	pTemp+=4
+	mov eax,dwVirtualSize
+	mov [pTemp],eax
+	pTemp+=4
+	dec ecx
+	dwPEQuKuaiBiao+=0x28
+	msg F:\WorkStation\模拟器\MemoryDumpFile\memdump{x:dwVirtualAddress}
+	savedata F:\WorkStation\模拟器\MemoryDumpFile\memdump{x:dwVirtualAddress},dwVirtualAddress,dwVirtualSize
+	jmp Begin
+end:
+
+;获取线程堆栈
+push eax
+push edx
+
+mov edx,fs:[18]
+dwTEBBase = mem.base(edx)
+dwTEBSize = mem.size(edx)
+mov eax,[edx+8] 
+;stackBase
+dwStackSize = mem.size(eax)
+mov eax,[edx+4]
+dwStackBase = eax
+dwStackBase-=dwStackSize
+
+mov eax,dwStackBase
+mov [pTemp],eax
+pTemp+=4
+
+mov eax,dwStackSize
+mov [pTemp],eax
+pTemp+=4
+
+mov eax,dwTEBBase
+mov [pTemp],eax
+pTemp+=4
+
+mov eax,dwTEBSize
+mov [pTemp],eax
+pTemp+=4
+
+msg F:\WorkStation\模拟器\MemoryDumpFile\memdump{x:dwStackBase}
+savedata F:\WorkStation\模拟器\MemoryDumpFile\memdump{x:dwStackBase},dwStackBase,dwStackSize
+
+msg F:\WorkStation\模拟器\MemoryDumpFile\memdump{x:dwTEBBase}
+savedata F:\WorkStation\模拟器\MemoryDumpFile\memdump{x:dwTEBBase},dwTEBBase,dwTEBSize
+
+mov edx,fs:[18]
+mov [pTemp],edx
+pTemp+=4
+
+pop edx
+pop eax
+
+pop eflags
+pop ebx
+pop edx
+pop ecx
+pop eax
+
+
+savedata F:\WorkStation\模拟器\MemoryDumpFile\memdumpData,pMyMem,0x1000
+
+ret

@@ -1,0 +1,20 @@
+0: mov dx, word ptr [edi]               
+<dx_w><edi_r><mem_r>
+1: add edi, 2                           
+<edi_r><edi_w>
+6: xor cl, bl                           
+<bl_r><cl_r><cl_w>
+9: add cl, 0xbf                         
+<cl_r><cl_w>
+10: xor cl, 0xa1                        
+<cl_r><cl_w>
+12: dec cl                              
+<cl_r><cl_w>
+14: not cl                              
+<cl_r><cl_w>
+16: rol cl, 1                           
+<cl_r><cl_w>
+22: mov word ptr [esp + ecx], dx        
+<dx_r><ecx_r><esp_r><mem_w>
+39: xor ebx, edx                        
+<ebx_r><ebx_w><edx_r>

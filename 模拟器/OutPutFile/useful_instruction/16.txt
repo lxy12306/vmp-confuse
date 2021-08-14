@@ -1,0 +1,24 @@
+0: mov cx, word ptr [edi]               
+<cx_w><edi_r><mem_r>
+3: mov ax, word ptr [edi + 2]           
+<ax_w><edi_r><mem_r>
+6: lea edi, [edi - 2]                   
+<edi_r><edi_w>
+7: not cx                               
+<cx_r><cx_w>
+8: not ax                               
+<ax_r><ax_w>
+9: or cx, ax                            
+<ax_r><cx_r><cx_w><eflag_w>
+11: mov word ptr [edi + 4], cx          
+<cx_r><edi_r><mem_w>
+15: pushfd                              
+<eflag_r><esp_r><esp_w>
+16: pop dword ptr [edi]                 
+<edi_r><esp_r><esp_w><mem_w>
+38: xor ebx, eax                        
+<eax_r><ebx_r><ebx_w>
+44: lea ecx, [esp + 0x60]               
+<ecx_w><esp_r>
+46: cmp edi, ecx                        
+<ecx_r><edi_r><eflag_w>

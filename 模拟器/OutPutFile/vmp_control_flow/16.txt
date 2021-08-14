@@ -1,0 +1,17 @@
+20: sub esi, 4                          
+<esi_r><esi_w>
+21: mov eax, dword ptr [esi]            
+<eax_w><esi_r><mem_r>
+24: xor eax, ebx                        
+<eax_r><eax_w><ebx_r>
+27: ror eax, 3                          
+<eax_r><eax_w>
+29: lea eax, [eax - 0x37419aa]          
+<eax_r><eax_w>
+33: xor eax, 0x50541319                 
+<eax_r><eax_w>
+36: bswap eax                           
+<eax_r><eax_w>
+41: add ebp, eax                        
+<eax_r><ebp_r><ebp_w>
+end:: jmp ebp                           

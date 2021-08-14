@@ -1,0 +1,41 @@
+0: mov ax, word ptr [edi]               
+<ax_w><edi_r><mem_r>
+4: mov cx, word ptr [edi + 2]           
+<cx_w><edi_r><mem_r>
+7: sub edi, 2                           
+<edi_r><edi_w>
+10: not ax                              
+<ax_r><ax_w>
+11: not cx                              
+<cx_r><cx_w>
+13: and ax, cx                          
+<ax_r><ax_w><cx_r><eflag_w>
+14: mov word ptr [edi + 4], ax          
+<ax_r><edi_r><mem_w>
+16: pushfd                              
+<eflag_r><esp_r><esp_w>
+20: pop dword ptr [edi]                 
+<edi_r><esp_r><esp_w><mem_w>
+21: sub esi, 4                          
+<esi_r><esi_w>
+24: mov ecx, dword ptr [esi]            
+<ecx_w><esi_r><mem_r>
+28: xor ecx, ebx                        
+<ebx_r><ecx_r><ecx_w>
+30: rol ecx, 3                          
+<ecx_r><ecx_w>
+34: xor ecx, 0x65de61c6                 
+<ecx_r><ecx_w>
+37: rol ecx, 3                          
+<ecx_r><ecx_w>
+38: lea ecx, [ecx + 0x617940cf]         
+<ecx_r><ecx_w>
+42: xor ebx, ecx                        
+<ebx_r><ebx_w><ecx_r>
+45: add ebp, ecx                        
+<ebp_r><ebp_w><ecx_r>
+48: lea ecx, [esp + 0x60]               
+<ecx_w><esp_r>
+50: cmp edi, ecx                        
+<ecx_r><edi_r><eflag_w>
+end:: jmp ebp                           

@@ -1,0 +1,5 @@
+﻿cl : 命令行 warning D9025: 正在重写“/sdl”(用“/GS-”)
+  clean_special_ins.cpp
+F:\WorkStation\模拟器\CommonFiles\ToolLibrary\unicorn-1.0.2-win32\include\unicorn\platform.h(164,5): warning C4996: '_ftime64': This function or variable may be unsafe. Consider using _ftime64_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+F:\WorkStation\模拟器\clean_special_ins.cpp(16,25): warning C4018: “<”: 有符号/无符号不匹配
+  模拟器.vcxproj -> F:\WorkStation\模拟器\Debug\模拟器.exe

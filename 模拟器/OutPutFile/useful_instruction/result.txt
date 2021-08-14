@@ -1,0 +1,1381 @@
+0: push esi                             
+4: push ecx                             
+6: push eax                             
+7: push edi                             
+9: push ebp                             
+11: pushfd                              
+12: btc si, 0xd7                        
+14: push ebx                            
+16: push edx                            
+21: push edx                            
+22: mov esi, dword ptr [esp + 0x28]     
+33: movsx edi, bp                       
+35: mov edi, esp                        
+36: lea esp, [esp - 0xc0]               
+39: mov eax, 0                          
+60: xor ebx, eax                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+2: lea edi, [edi + 4]                   
+8: xor dl, bl                           
+12: not dl                              
+15: inc dl                              
+17: not dl                              
+18: neg dl                              
+19: inc dl                              
+20: rol dl, 1                           
+21: not dl                              
+24: inc dl                              
+30: mov dword ptr [esp + edx], ecx      
+48: xor ebx, eax                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+1: add edi, 4                           
+9: xor dl, bl                           
+12: not dl                              
+16: inc dl                              
+17: not dl                              
+19: neg dl                              
+22: inc dl                              
+23: rol dl, 1                           
+24: not dl                              
+26: inc dl                              
+32: mov dword ptr [esp + edx], ecx      
+57: xor ebx, eax                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+3: lea edi, [edi + 4]                   
+13: xor dl, bl                          
+16: not dl                              
+18: inc dl                              
+20: not dl                              
+24: neg dl                              
+28: inc dl                              
+30: rol dl, 1                           
+34: not dl                              
+35: inc dl                              
+42: mov dword ptr [esp + edx], ecx      
+66: xor ebx, eax                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+2: add edi, 4                           
+8: xor dl, bl                           
+9: not dl                               
+12: inc dl                              
+13: not dl                              
+17: neg dl                              
+20: inc dl                              
+22: rol dl, 1                           
+24: not dl                              
+26: inc dl                              
+31: mov dword ptr [esp + edx], ecx      
+52: xor ebx, eax                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+4: add edi, 4                           
+13: xor dl, bl                          
+15: not dl                              
+16: inc dl                              
+19: not dl                              
+23: neg dl                              
+26: inc dl                              
+29: rol dl, 1                           
+33: not dl                              
+36: inc dl                              
+39: mov dword ptr [esp + edx], ecx      
+61: xor ebx, eax                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+3: add edi, 4                           
+15: xor dl, bl                          
+18: not dl                              
+19: inc dl                              
+23: not dl                              
+25: neg dl                              
+26: inc dl                              
+28: rol dl, 1                           
+29: not dl                              
+30: inc dl                              
+32: mov dword ptr [esp + edx], ecx      
+52: xor ebx, eax                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+4: lea edi, [edi + 4]                   
+8: xor dl, bl                           
+10: not dl                              
+12: inc dl                              
+16: not dl                              
+20: neg dl                              
+21: inc dl                              
+23: rol dl, 1                           
+25: not dl                              
+26: inc dl                              
+31: mov dword ptr [esp + edx], ecx      
+48: xor ebx, eax                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+1: add edi, 4                           
+10: xor dl, bl                          
+14: not dl                              
+17: inc dl                              
+19: not dl                              
+22: neg dl                              
+24: inc dl                              
+28: rol dl, 1                           
+32: not dl                              
+36: inc dl                              
+40: mov dword ptr [esp + edx], ecx      
+60: xor ebx, eax                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+3: lea edi, [edi + 4]                   
+12: xor dl, bl                          
+14: not dl                              
+16: inc dl                              
+19: not dl                              
+22: neg dl                              
+23: inc dl                              
+24: rol dl, 1                           
+28: not dl                              
+29: inc dl                              
+36: mov dword ptr [esp + edx], ecx      
+51: xor ebx, eax                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+1: lea edi, [edi + 4]                   
+8: xor dl, bl                           
+11: not dl                              
+13: inc dl                              
+15: not dl                              
+16: neg dl                              
+19: inc dl                              
+21: rol dl, 1                           
+22: not dl                              
+25: inc dl                              
+27: mov dword ptr [esp + edx], ecx      
+46: xor ebx, eax                        
+-----------------------------------------------------------------------
+5: xor cl, bl                           
+9: add cl, 0xd2                         
+11: neg cl                              
+12: rol cl, 1                           
+15: add cl, 0x92                        
+18: mov dx, word ptr [esp + ecx]        
+22: sub edi, 2                          
+25: mov word ptr [edi], dx              
+42: xor ebx, eax                        
+47: lea ecx, [esp + 0x60]               
+49: cmp edi, ecx                        
+-----------------------------------------------------------------------
+4: xor cl, bl                           
+6: add cl, 0xd2                         
+9: neg cl                               
+12: rol cl, 1                           
+14: add cl, 0x92                        
+20: mov dx, word ptr [esp + ecx]        
+21: lea edi, [edi - 2]                  
+22: mov word ptr [edi], dx              
+44: xor ebx, eax                        
+50: lea ecx, [esp + 0x60]               
+52: cmp edi, ecx                        
+-----------------------------------------------------------------------
+2: xor cl, bl                           
+4: add cl, 0xd2                         
+8: neg cl                               
+12: rol cl, 1                           
+14: add cl, 0x92                        
+18: mov dx, word ptr [esp + ecx]        
+19: sub edi, 2                          
+21: mov word ptr [edi], dx              
+43: xor ebx, eax                        
+47: lea ecx, [esp + 0x60]               
+49: cmp edi, ecx                        
+-----------------------------------------------------------------------
+0: mov cx, word ptr [edi]               
+3: mov ax, word ptr [edi + 2]           
+6: lea edi, [edi - 2]                   
+7: not cx                               
+8: not ax                               
+9: or cx, ax                            
+11: mov word ptr [edi + 4], cx          
+15: pushfd                              
+16: pop dword ptr [edi]                 
+38: xor ebx, eax                        
+44: lea ecx, [esp + 0x60]               
+46: cmp edi, ecx                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+3: lea edi, [edi + 4]                   
+11: xor dl, bl                          
+13: not dl                              
+15: inc dl                              
+19: not dl                              
+21: neg dl                              
+22: inc dl                              
+26: rol dl, 1                           
+27: not dl                              
+30: inc dl                              
+35: mov dword ptr [esp + edx], ecx      
+56: xor ebx, eax                        
+-----------------------------------------------------------------------
+4: xor cl, bl                           
+7: add cl, 0xd2                         
+10: neg cl                              
+12: rol cl, 1                           
+15: add cl, 0x92                        
+19: mov dx, word ptr [esp + ecx]        
+23: lea edi, [edi - 2]                  
+25: mov word ptr [edi], dx              
+47: xor ebx, eax                        
+52: lea ecx, [esp + 0x60]               
+54: cmp edi, ecx                        
+-----------------------------------------------------------------------
+3: xor cl, bl                           
+5: add cl, 0xd2                         
+9: neg cl                               
+10: rol cl, 1                           
+11: add cl, 0x92                        
+18: mov dx, word ptr [esp + ecx]        
+22: lea edi, [edi - 2]                  
+23: mov word ptr [edi], dx              
+44: xor ebx, eax                        
+47: lea ecx, [esp + 0x60]               
+49: cmp edi, ecx                        
+-----------------------------------------------------------------------
+3: xor cl, bl                           
+5: add cl, 0xd2                         
+6: neg cl                               
+9: rol cl, 1                            
+13: add cl, 0x92                        
+17: mov dx, word ptr [esp + ecx]        
+21: sub edi, 2                          
+24: mov word ptr [edi], dx              
+46: xor ebx, eax                        
+51: lea ecx, [esp + 0x60]               
+53: cmp edi, ecx                        
+-----------------------------------------------------------------------
+0: mov ax, word ptr [edi]               
+2: mov cx, word ptr [edi + 2]           
+5: sub edi, 2                           
+7: not ax                               
+10: not cx                              
+11: and ax, cx                          
+14: mov word ptr [edi + 4], ax          
+15: pushfd                              
+17: pop dword ptr [edi]                 
+37: xor ebx, ecx                        
+42: lea ecx, [esp + 0x60]               
+44: cmp edi, ecx                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+2: lea edi, [edi + 4]                   
+8: xor dl, bl                           
+12: not dl                              
+15: inc dl                              
+17: not dl                              
+18: neg dl                              
+19: inc dl                              
+20: rol dl, 1                           
+21: not dl                              
+24: inc dl                              
+30: mov dword ptr [esp + edx], ecx      
+48: xor ebx, eax                        
+-----------------------------------------------------------------------
+0: mov ax, word ptr [edi]               
+1: mov cx, word ptr [edi + 2]           
+2: sub edi, 2                           
+5: add ax, cx                           
+8: mov word ptr [edi + 4], ax           
+9: pushfd                               
+13: pop dword ptr [edi]                 
+36: xor ebx, ecx                        
+41: lea ecx, [esp + 0x60]               
+43: cmp edi, ecx                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+1: add edi, 4                           
+9: xor dl, bl                           
+12: not dl                              
+16: inc dl                              
+17: not dl                              
+19: neg dl                              
+22: inc dl                              
+23: rol dl, 1                           
+24: not dl                              
+26: inc dl                              
+32: mov dword ptr [esp + edx], ecx      
+57: xor ebx, eax                        
+-----------------------------------------------------------------------
+0: mov eax, edi                         
+2: lea edi, [edi - 4]                   
+4: mov dword ptr [edi], eax             
+28: xor ebx, edx                        
+34: lea ecx, [esp + 0x60]               
+36: cmp edi, ecx                        
+-----------------------------------------------------------------------
+0: mov edx, dword ptr [edi]             
+3: mov cx, word ptr ss:[edx]            
+5: lea edi, [edi + 2]                   
+8: mov word ptr [edi], cx               
+33: xor ebx, ecx                        
+-----------------------------------------------------------------------
+0: mov cx, word ptr [edi]               
+1: mov ax, word ptr [edi + 2]           
+5: sub edi, 2                           
+6: not cx                               
+8: not ax                               
+11: or cx, ax                           
+12: mov word ptr [edi + 4], cx          
+14: pushfd                              
+18: pop dword ptr [edi]                 
+36: xor ebx, eax                        
+42: lea ecx, [esp + 0x60]               
+44: cmp edi, ecx                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+3: lea edi, [edi + 4]                   
+13: xor dl, bl                          
+16: not dl                              
+18: inc dl                              
+20: not dl                              
+24: neg dl                              
+28: inc dl                              
+30: rol dl, 1                           
+34: not dl                              
+35: inc dl                              
+42: mov dword ptr [esp + edx], ecx      
+66: xor ebx, eax                        
+-----------------------------------------------------------------------
+0: mov dx, word ptr [edi]               
+3: lea edi, [edi + 2]                   
+9: xor cl, bl                           
+11: add cl, 0xbf                        
+15: xor cl, 0xa1                        
+17: dec cl                              
+19: not cl                              
+21: rol cl, 1                           
+24: mov word ptr [esp + ecx], dx        
+42: xor ebx, edx                        
+-----------------------------------------------------------------------
+0: mov ax, word ptr [edi]               
+4: mov cx, word ptr [edi + 2]           
+5: lea edi, [edi - 2]                   
+8: add ax, cx                           
+9: mov word ptr [edi + 4], ax           
+13: pushfd                              
+16: pop dword ptr [edi]                 
+38: xor ebx, ecx                        
+43: lea ecx, [esp + 0x60]               
+45: cmp edi, ecx                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+2: add edi, 4                           
+8: xor dl, bl                           
+9: not dl                               
+12: inc dl                              
+13: not dl                              
+17: neg dl                              
+20: inc dl                              
+22: rol dl, 1                           
+24: not dl                              
+26: inc dl                              
+31: mov dword ptr [esp + edx], ecx      
+52: xor ebx, eax                        
+-----------------------------------------------------------------------
+0: mov eax, edi                         
+3: sub edi, 4                           
+5: mov dword ptr [edi], eax             
+29: xor ebx, edx                        
+32: lea ecx, [esp + 0x60]               
+34: cmp edi, ecx                        
+-----------------------------------------------------------------------
+0: mov edx, dword ptr [edi]             
+1: mov cx, word ptr ss:[edx]            
+5: add edi, 2                           
+6: mov word ptr [edi], cx               
+27: xor ebx, ecx                        
+-----------------------------------------------------------------------
+0: mov cx, word ptr [edi]               
+2: mov ax, word ptr [edi + 2]           
+3: sub edi, 2                           
+5: not cx                               
+7: not ax                               
+9: or cx, ax                            
+10: mov word ptr [edi + 4], cx          
+12: pushfd                              
+15: pop dword ptr [edi]                 
+29: xor ebx, eax                        
+33: lea ecx, [esp + 0x60]               
+35: cmp edi, ecx                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+4: add edi, 4                           
+13: xor dl, bl                          
+15: not dl                              
+16: inc dl                              
+19: not dl                              
+23: neg dl                              
+26: inc dl                              
+29: rol dl, 1                           
+33: not dl                              
+36: inc dl                              
+39: mov dword ptr [esp + edx], ecx      
+61: xor ebx, eax                        
+-----------------------------------------------------------------------
+0: mov dx, word ptr [edi]               
+1: lea edi, [edi + 2]                   
+5: xor cl, bl                           
+8: add cl, 0xbf                         
+9: xor cl, 0xa1                         
+11: dec cl                              
+13: not cl                              
+14: rol cl, 1                           
+19: mov word ptr [esp + ecx], dx        
+20: cwd                                 
+38: xor ebx, edx                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+3: add edi, 4                           
+15: xor dl, bl                          
+18: not dl                              
+19: inc dl                              
+23: not dl                              
+25: neg dl                              
+26: inc dl                              
+28: rol dl, 1                           
+29: not dl                              
+30: inc dl                              
+32: mov dword ptr [esp + edx], ecx      
+52: xor ebx, eax                        
+-----------------------------------------------------------------------
+13: sub edi, 4                          
+15: mov dword ptr [edi], ecx            
+47: xor ebx, eax                        
+52: lea ecx, [esp + 0x60]               
+54: cmp edi, ecx                        
+-----------------------------------------------------------------------
+8: xor cl, bl                           
+12: add cl, 0xd2                        
+16: neg cl                              
+19: rol cl, 1                           
+20: add cl, 0x92                        
+23: mov dx, word ptr [esp + ecx]        
+26: sub edi, 2                          
+27: mov word ptr [edi], dx              
+52: xor ebx, eax                        
+57: lea ecx, [esp + 0x60]               
+59: cmp edi, ecx                        
+-----------------------------------------------------------------------
+0: mov eax, edi                         
+2: sub edi, 4                           
+4: mov dword ptr [edi], eax             
+28: xor ebx, edx                        
+33: lea ecx, [esp + 0x60]               
+35: cmp edi, ecx                        
+-----------------------------------------------------------------------
+0: mov edx, dword ptr [edi]             
+1: mov cx, word ptr ss:[edx]            
+2: lea edi, [edi + 2]                   
+5: mov word ptr [edi], cx               
+34: xor ebx, ecx                        
+-----------------------------------------------------------------------
+0: mov ax, word ptr [edi]               
+2: mov cx, word ptr [edi + 2]           
+5: lea edi, [edi - 2]                   
+7: not ax                               
+8: not cx                               
+11: and ax, cx                          
+12: mov word ptr [edi + 4], ax          
+13: pushfd                              
+14: pop dword ptr [edi]                 
+35: xor ebx, ecx                        
+41: lea ecx, [esp + 0x60]               
+43: cmp edi, ecx                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+4: lea edi, [edi + 4]                   
+8: xor dl, bl                           
+10: not dl                              
+12: inc dl                              
+16: not dl                              
+20: neg dl                              
+21: inc dl                              
+23: rol dl, 1                           
+25: not dl                              
+26: inc dl                              
+31: mov dword ptr [esp + edx], ecx      
+48: xor ebx, eax                        
+-----------------------------------------------------------------------
+23: sub edi, 2                          
+24: mov word ptr [edi], dx              
+43: xor ebx, eax                        
+48: lea ecx, [esp + 0x60]               
+50: cmp edi, ecx                        
+-----------------------------------------------------------------------
+0: mov ax, word ptr [edi]               
+1: mov cx, word ptr [edi + 2]           
+4: lea edi, [edi - 2]                   
+6: not ax                               
+8: not cx                               
+12: and ax, cx                          
+14: mov word ptr [edi + 4], ax          
+16: pushfd                              
+17: pop dword ptr [edi]                 
+33: xor ebx, ecx                        
+40: lea ecx, [esp + 0x60]               
+42: cmp edi, ecx                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+1: add edi, 4                           
+10: xor dl, bl                          
+14: not dl                              
+17: inc dl                              
+19: not dl                              
+22: neg dl                              
+24: inc dl                              
+28: rol dl, 1                           
+32: not dl                              
+36: inc dl                              
+40: mov dword ptr [esp + edx], ecx      
+60: xor ebx, eax                        
+-----------------------------------------------------------------------
+7: xor dl, bl                           
+11: rol dl, 1                           
+15: xor dl, 0xfc                        
+16: ror dl, 1                           
+18: inc dl                              
+21: rol dl, 1                           
+24: add dl, 0x67                        
+29: mov eax, dword ptr [esp + edx]      
+30: lea edi, [edi - 4]                  
+33: mov dword ptr [edi], eax            
+67: xor ebx, edx                        
+72: lea ecx, [esp + 0x60]               
+74: cmp edi, ecx                        
+-----------------------------------------------------------------------
+0: mov eax, dword ptr [edi]             
+3: mov cl, byte ptr [edi + 4]           
+6: sub edi, 2                           
+7: shr eax, cl                          
+9: mov dword ptr [edi + 4], eax         
+11: pushfd                              
+15: pop dword ptr [edi]                 
+35: xor ebx, edx                        
+41: lea ecx, [esp + 0x60]               
+43: cmp edi, ecx                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+3: lea edi, [edi + 4]                   
+12: xor dl, bl                          
+14: not dl                              
+16: inc dl                              
+19: not dl                              
+22: neg dl                              
+23: inc dl                              
+24: rol dl, 1                           
+28: not dl                              
+29: inc dl                              
+36: mov dword ptr [esp + edx], ecx      
+51: xor ebx, eax                        
+-----------------------------------------------------------------------
+0: mov eax, edi                         
+1: lea edi, [edi - 4]                   
+3: mov dword ptr [edi], eax             
+25: xor ebx, edx                        
+30: lea ecx, [esp + 0x60]               
+32: cmp edi, ecx                        
+-----------------------------------------------------------------------
+0: mov edx, dword ptr [edi]             
+3: mov cx, word ptr ss:[edx]            
+4: add edi, 2                           
+7: mov word ptr [edi], cx               
+25: xor ebx, ecx                        
+-----------------------------------------------------------------------
+0: mov ax, word ptr [edi]               
+1: mov cx, word ptr [edi + 2]           
+5: sub edi, 2                           
+7: not ax                               
+11: not cx                              
+13: and ax, cx                          
+15: mov word ptr [edi + 4], ax          
+17: pushfd                              
+20: pop dword ptr [edi]                 
+38: xor ebx, ecx                        
+43: lea ecx, [esp + 0x60]               
+45: cmp edi, ecx                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+1: lea edi, [edi + 4]                   
+8: xor dl, bl                           
+11: not dl                              
+13: inc dl                              
+15: not dl                              
+16: neg dl                              
+19: inc dl                              
+21: rol dl, 1                           
+22: not dl                              
+25: inc dl                              
+27: mov dword ptr [esp + edx], ecx      
+46: xor ebx, eax                        
+-----------------------------------------------------------------------
+21: sub edi, 2                          
+24: mov word ptr [edi], dx              
+42: xor ebx, eax                        
+46: lea ecx, [esp + 0x60]               
+48: cmp edi, ecx                        
+-----------------------------------------------------------------------
+0: mov ax, word ptr [edi]               
+2: mov cx, word ptr [edi + 2]           
+5: sub edi, 2                           
+6: not ax                               
+7: not cx                               
+8: and ax, cx                           
+10: mov word ptr [edi + 4], ax          
+12: pushfd                              
+16: pop dword ptr [edi]                 
+34: xor ebx, ecx                        
+38: lea ecx, [esp + 0x60]               
+40: cmp edi, ecx                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+3: lea edi, [edi + 4]                   
+11: xor dl, bl                          
+13: not dl                              
+15: inc dl                              
+19: not dl                              
+21: neg dl                              
+22: inc dl                              
+26: rol dl, 1                           
+27: not dl                              
+30: inc dl                              
+35: mov dword ptr [esp + edx], ecx      
+56: xor ebx, eax                        
+-----------------------------------------------------------------------
+3: xor cl, bl                           
+5: add cl, 0xd2                         
+6: neg cl                               
+9: rol cl, 1                            
+12: add cl, 0x92                        
+20: mov dx, word ptr [esp + ecx]        
+22: lea edi, [edi - 2]                  
+23: mov word ptr [edi], dx              
+44: xor ebx, eax                        
+51: lea ecx, [esp + 0x60]               
+53: cmp edi, ecx                        
+-----------------------------------------------------------------------
+4: xor cl, bl                           
+8: add cl, 0xd2                         
+11: neg cl                              
+12: rol cl, 1                           
+14: add cl, 0x92                        
+19: mov dx, word ptr [esp + ecx]        
+20: lea edi, [edi - 2]                  
+22: mov word ptr [edi], dx              
+48: xor ebx, eax                        
+53: lea ecx, [esp + 0x60]               
+55: cmp edi, ecx                        
+-----------------------------------------------------------------------
+0: mov ax, word ptr [edi]               
+1: mov cx, word ptr [edi + 2]           
+3: lea edi, [edi - 2]                   
+4: test eax, 0x6a4d1d96                 
+7: not ax                               
+8: not cx                               
+9: and ax, cx                           
+13: mov word ptr [edi + 4], ax          
+16: pushfd                              
+19: pop dword ptr [edi]                 
+37: xor ebx, ecx                        
+42: lea ecx, [esp + 0x60]               
+44: cmp edi, ecx                        
+-----------------------------------------------------------------------
+21: lea edi, [edi - 4]                  
+24: mov dword ptr [edi], ecx            
+59: xor ebx, eax                        
+64: lea ecx, [esp + 0x60]               
+66: cmp edi, ecx                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+2: lea edi, [edi + 4]                   
+8: xor dl, bl                           
+12: not dl                              
+15: inc dl                              
+17: not dl                              
+18: neg dl                              
+19: inc dl                              
+20: rol dl, 1                           
+21: not dl                              
+24: inc dl                              
+30: mov dword ptr [esp + edx], ecx      
+48: xor ebx, eax                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+1: add edi, 4                           
+9: xor dl, bl                           
+12: not dl                              
+16: inc dl                              
+17: not dl                              
+19: neg dl                              
+22: inc dl                              
+23: rol dl, 1                           
+24: not dl                              
+26: inc dl                              
+32: mov dword ptr [esp + edx], ecx      
+57: xor ebx, eax                        
+-----------------------------------------------------------------------
+14: sub edi, 2                          
+16: mov word ptr [edi], dx              
+34: xor ebx, eax                        
+39: lea ecx, [esp + 0x60]               
+41: cmp edi, ecx                        
+-----------------------------------------------------------------------
+0: mov ax, word ptr [edi]               
+4: mov cx, word ptr [edi + 2]           
+7: sub edi, 2                           
+10: not ax                              
+11: not cx                              
+13: and ax, cx                          
+14: mov word ptr [edi + 4], ax          
+16: pushfd                              
+20: pop dword ptr [edi]                 
+42: xor ebx, ecx                        
+48: lea ecx, [esp + 0x60]               
+50: cmp edi, ecx                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+3: lea edi, [edi + 4]                   
+13: xor dl, bl                          
+16: not dl                              
+18: inc dl                              
+20: not dl                              
+24: neg dl                              
+28: inc dl                              
+30: rol dl, 1                           
+34: not dl                              
+35: inc dl                              
+42: mov dword ptr [esp + edx], ecx      
+66: xor ebx, eax                        
+-----------------------------------------------------------------------
+0: mov ax, word ptr [edi]               
+3: mov cx, word ptr [edi + 2]           
+4: sub edi, 2                           
+8: add ax, cx                           
+9: mov word ptr [edi + 4], ax           
+11: pushfd                              
+13: pop dword ptr [edi]                 
+31: xor ebx, ecx                        
+36: lea ecx, [esp + 0x60]               
+38: cmp edi, ecx                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+2: add edi, 4                           
+8: xor dl, bl                           
+9: not dl                               
+12: inc dl                              
+13: not dl                              
+17: neg dl                              
+20: inc dl                              
+22: rol dl, 1                           
+24: not dl                              
+26: inc dl                              
+31: mov dword ptr [esp + edx], ecx      
+52: xor ebx, eax                        
+-----------------------------------------------------------------------
+0: mov dx, word ptr [edi]               
+1: add edi, 2                           
+6: xor cl, bl                           
+9: add cl, 0xbf                         
+10: xor cl, 0xa1                        
+12: dec cl                              
+14: not cl                              
+16: rol cl, 1                           
+22: mov word ptr [esp + ecx], dx        
+39: xor ebx, edx                        
+-----------------------------------------------------------------------
+0: mov dx, word ptr [edi]               
+2: add edi, 2                           
+9: xor cl, bl                           
+12: add cl, 0xbf                        
+14: xor cl, 0xa1                        
+16: dec cl                              
+19: not cl                              
+20: rol cl, 1                           
+24: mov word ptr [esp + ecx], dx        
+41: xor ebx, edx                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+4: add edi, 4                           
+13: xor dl, bl                          
+15: not dl                              
+16: inc dl                              
+19: not dl                              
+23: neg dl                              
+26: inc dl                              
+29: rol dl, 1                           
+33: not dl                              
+36: inc dl                              
+39: mov dword ptr [esp + edx], ecx      
+61: xor ebx, eax                        
+-----------------------------------------------------------------------
+22: lea edi, [edi - 4]                  
+26: mov dword ptr [edi], ecx            
+57: xor ebx, eax                        
+63: lea ecx, [esp + 0x60]               
+65: cmp edi, ecx                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+3: add edi, 4                           
+15: xor dl, bl                          
+18: not dl                              
+19: inc dl                              
+23: not dl                              
+25: neg dl                              
+26: inc dl                              
+28: rol dl, 1                           
+29: not dl                              
+30: inc dl                              
+32: mov dword ptr [esp + edx], ecx      
+52: xor ebx, eax                        
+-----------------------------------------------------------------------
+5: xor dl, bl                           
+6: rol dl, 1                            
+7: xor dl, 0xfc                         
+10: ror dl, 1                           
+12: inc dl                              
+15: rol dl, 1                           
+16: add dl, 0x67                        
+21: mov eax, dword ptr [esp + edx]      
+25: sub edi, 4                          
+28: mov dword ptr [edi], eax            
+66: xor ebx, edx                        
+70: lea ecx, [esp + 0x60]               
+72: cmp edi, ecx                        
+-----------------------------------------------------------------------
+7: xor dl, bl                           
+10: rol dl, 1                           
+11: xor dl, 0xfc                        
+13: ror dl, 1                           
+14: inc dl                              
+15: rol dl, 1                           
+17: add dl, 0x67                        
+19: mov eax, dword ptr [esp + edx]      
+23: lea edi, [edi - 4]                  
+24: mov dword ptr [edi], eax            
+52: xor ebx, edx                        
+56: lea ecx, [esp + 0x60]               
+58: cmp edi, ecx                        
+-----------------------------------------------------------------------
+0: mov eax, dword ptr [edi]             
+2: mov ecx, dword ptr [edi + 4]         
+4: not eax                              
+5: not ecx                              
+6: or eax, ecx                          
+7: mov dword ptr [edi + 4], eax         
+9: pushfd                               
+13: pop dword ptr [edi]                 
+45: xor ebx, eax                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+4: lea edi, [edi + 4]                   
+8: xor dl, bl                           
+10: not dl                              
+12: inc dl                              
+16: not dl                              
+20: neg dl                              
+21: inc dl                              
+23: rol dl, 1                           
+25: not dl                              
+26: inc dl                              
+31: mov dword ptr [esp + edx], ecx      
+48: xor ebx, eax                        
+-----------------------------------------------------------------------
+4: xor dl, bl                           
+6: rol dl, 1                            
+7: xor dl, 0xfc                         
+9: ror dl, 1                            
+10: inc dl                              
+12: rol dl, 1                           
+14: add dl, 0x67                        
+19: mov eax, dword ptr [esp + edx]      
+20: sub edi, 4                          
+23: mov dword ptr [edi], eax            
+52: xor ebx, edx                        
+56: lea ecx, [esp + 0x60]               
+58: cmp edi, ecx                        
+-----------------------------------------------------------------------
+4: xor dl, bl                           
+5: rol dl, 1                            
+9: xor dl, 0xfc                         
+13: ror dl, 1                           
+15: inc dl                              
+18: rol dl, 1                           
+19: add dl, 0x67                        
+24: mov eax, dword ptr [esp + edx]      
+26: sub edi, 4                          
+28: mov dword ptr [edi], eax            
+52: test ax, 0xeda                      
+54: xor ebx, edx                        
+60: lea ecx, [esp + 0x60]               
+62: cmp edi, ecx                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+4: mov eax, dword ptr [edi + 4]         
+6: not ecx                              
+9: not eax                              
+10: and ecx, eax                        
+12: mov dword ptr [edi + 4], ecx        
+13: pushfd                              
+16: pop dword ptr [edi]                 
+30: xor ebx, ecx                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+1: add edi, 4                           
+10: xor dl, bl                          
+14: not dl                              
+17: inc dl                              
+19: not dl                              
+22: neg dl                              
+24: inc dl                              
+28: rol dl, 1                           
+32: not dl                              
+36: inc dl                              
+40: mov dword ptr [esp + edx], ecx      
+60: xor ebx, eax                        
+-----------------------------------------------------------------------
+0: mov eax, dword ptr [edi]             
+1: mov ecx, dword ptr [edi + 4]         
+2: not eax                              
+3: not ecx                              
+6: or eax, ecx                          
+8: mov dword ptr [edi + 4], eax         
+9: pushfd                               
+10: pop dword ptr [edi]                 
+42: xor ebx, eax                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+3: lea edi, [edi + 4]                   
+12: xor dl, bl                          
+14: not dl                              
+16: inc dl                              
+19: not dl                              
+22: neg dl                              
+23: inc dl                              
+24: rol dl, 1                           
+28: not dl                              
+29: inc dl                              
+36: mov dword ptr [esp + edx], ecx      
+51: xor ebx, eax                        
+-----------------------------------------------------------------------
+0: mov ecx, dword ptr [edi]             
+1: lea edi, [edi + 4]                   
+8: xor dl, bl                           
+11: not dl                              
+13: inc dl                              
+15: not dl                              
+16: neg dl                              
+19: inc dl                              
+21: rol dl, 1                           
+22: not dl                              
+25: inc dl                              
+27: mov dword ptr [esp + edx], ecx      
+46: xor ebx, eax                        
+-----------------------------------------------------------------------
+5: xor dl, bl                           
+8: rol dl, 1                            
+10: xor dl, 0xfc                        
+12: ror dl, 1                           
+13: inc dl                              
+15: rol dl, 1                           
+16: add dl, 0x67                        
+23: mov eax, dword ptr [esp + edx]      
+24: lea edi, [edi - 4]                  
+28: mov dword ptr [edi], eax            
+60: xor ebx, edx                        
+65: lea ecx, [esp + 0x60]               
+67: cmp edi, ecx                        
+-----------------------------------------------------------------------
+6: xor dl, bl                           
+7: rol dl, 1                            
+9: xor dl, 0xfc                         
+10: ror dl, 1                           
+11: inc dl                              
+15: rol dl, 1                           
+17: add dl, 0x67                        
+22: mov eax, dword ptr [esp + edx]      
+23: cdq                                 
+26: sub edi, 4                          
+27: mov dword ptr [edi], eax            
+55: xor ebx, edx                        
+61: lea ecx, [esp + 0x60]               
+63: cmp edi, ecx                        
+-----------------------------------------------------------------------
+4: xor dl, bl                           
+8: rol dl, 1                            
+9: xor dl, 0xfc                         
+11: ror dl, 1                           
+14: inc dl                              
+17: rol dl, 1                           
+21: add dl, 0x67                        
+25: mov eax, dword ptr [esp + edx]      
+26: cdq                                 
+27: sub edi, 4                          
+31: mov dword ptr [edi], eax            
+58: xor ebx, edx                        
+63: lea ecx, [esp + 0x60]               
+65: cmp edi, ecx                        
+-----------------------------------------------------------------------
+3: xor dl, bl                           
+5: rol dl, 1                            
+7: xor dl, 0xfc                         
+8: ror dl, 1                            
+11: inc dl                              
+14: rol dl, 1                           
+16: add dl, 0x67                        
+21: mov eax, dword ptr [esp + edx]      
+24: lea edi, [edi - 4]                  
+26: mov dword ptr [edi], eax            
+55: xor ebx, edx                        
+61: lea ecx, [esp + 0x60]               
+63: cmp edi, ecx                        
+-----------------------------------------------------------------------
+3: xor dl, bl                           
+4: rol dl, 1                            
+6: xor dl, 0xfc                         
+10: ror dl, 1                           
+13: inc dl                              
+14: rol dl, 1                           
+17: add dl, 0x67                        
+24: mov eax, dword ptr [esp + edx]      
+25: lea edi, [edi - 4]                  
+29: mov dword ptr [edi], eax            
+42: test ax, 0x606e                     
+62: xor ebx, edx                        
+68: lea ecx, [esp + 0x60]               
+70: cmp edi, ecx                        
+-----------------------------------------------------------------------
+6: xor dl, bl                           
+7: rol dl, 1                            
+11: xor dl, 0xfc                        
+14: ror dl, 1                           
+17: inc dl                              
+18: rol dl, 1                           
+19: add dl, 0x67                        
+24: mov eax, dword ptr [esp + edx]      
+27: lea edi, [edi - 4]                  
+30: mov dword ptr [edi], eax            
+62: xor ebx, edx                        
+63: test al, 0xcb                       
+67: lea ecx, [esp + 0x60]               
+69: cmp edi, ecx                        
+-----------------------------------------------------------------------
+7: xor dl, bl                           
+11: rol dl, 1                           
+15: xor dl, 0xfc                        
+16: ror dl, 1                           
+18: inc dl                              
+21: rol dl, 1                           
+24: add dl, 0x67                        
+29: mov eax, dword ptr [esp + edx]      
+30: lea edi, [edi - 4]                  
+33: mov dword ptr [edi], eax            
+67: xor ebx, edx                        
+72: lea ecx, [esp + 0x60]               
+74: cmp edi, ecx                        
+-----------------------------------------------------------------------
+5: xor dl, bl                           
+6: rol dl, 1                            
+7: xor dl, 0xfc                         
+10: ror dl, 1                           
+12: inc dl                              
+15: rol dl, 1                           
+16: add dl, 0x67                        
+21: mov eax, dword ptr [esp + edx]      
+25: sub edi, 4                          
+28: mov dword ptr [edi], eax            
+66: xor ebx, edx                        
+70: lea ecx, [esp + 0x60]               
+72: cmp edi, ecx                        
+-----------------------------------------------------------------------
+7: xor dl, bl                           
+10: rol dl, 1                           
+11: xor dl, 0xfc                        
+13: ror dl, 1                           
+14: inc dl                              
+15: rol dl, 1                           
+17: add dl, 0x67                        
+19: mov eax, dword ptr [esp + edx]      
+23: lea edi, [edi - 4]                  
+24: mov dword ptr [edi], eax            
+52: xor ebx, edx                        
+56: lea ecx, [esp + 0x60]               
+58: cmp edi, ecx                        
+-----------------------------------------------------------------------
+4: xor dl, bl                           
+6: rol dl, 1                            
+7: xor dl, 0xfc                         
+9: ror dl, 1                            
+10: inc dl                              
+12: rol dl, 1                           
+14: add dl, 0x67                        
+19: mov eax, dword ptr [esp + edx]      
+20: sub edi, 4                          
+23: mov dword ptr [edi], eax            
+52: xor ebx, edx                        
+56: lea ecx, [esp + 0x60]               
+58: cmp edi, ecx                        
+-----------------------------------------------------------------------
+4: xor dl, bl                           
+5: rol dl, 1                            
+9: xor dl, 0xfc                         
+13: ror dl, 1                           
+15: inc dl                              
+18: rol dl, 1                           
+19: add dl, 0x67                        
+24: mov eax, dword ptr [esp + edx]      
+26: sub edi, 4                          
+28: mov dword ptr [edi], eax            
+52: test ax, 0xeda                      
+54: xor ebx, edx                        
+60: lea ecx, [esp + 0x60]               
+62: cmp edi, ecx                        
+-----------------------------------------------------------------------
+5: xor dl, bl                           
+8: rol dl, 1                            
+10: xor dl, 0xfc                        
+12: ror dl, 1                           
+13: inc dl                              
+15: rol dl, 1                           
+16: add dl, 0x67                        
+23: mov eax, dword ptr [esp + edx]      
+24: lea edi, [edi - 4]                  
+28: mov dword ptr [edi], eax            
+60: xor ebx, edx                        
+65: lea ecx, [esp + 0x60]               
+67: cmp edi, ecx                        
+-----------------------------------------------------------------------
+1: add edi, 4                           
+5: mov esi, edi                         
+11: mov edx, 0                          
+21: lea ebp, [ebp + 4]                  
+33: xor ebx, ecx                        
+-----------------------------------------------------------------------
+0: mov eax, dword ptr [esi]             
+4: lea esi, [esi + 4]                   
+8: xor dl, bl                           
+10: dec dl                              
+13: ror dl, 1                           
+14: neg dl                              
+16: xor dl, 0x8e                        
+20: mov dword ptr [esp + edx], eax      
+27: add ebp, 4                          
+43: xor ebx, edx                        
+-----------------------------------------------------------------------
+0: mov eax, dword ptr [esi]             
+1: add esi, 4                           
+6: xor dl, bl                           
+8: dec dl                               
+10: ror dl, 1                           
+13: neg dl                              
+14: xor dl, 0x8e                        
+19: mov dword ptr [esp + edx], eax      
+24: add ebp, 4                          
+38: xor ebx, edx                        
+-----------------------------------------------------------------------
+0: mov eax, dword ptr [esi]             
+3: lea esi, [esi + 4]                   
+5: test ax, 0x5bd9                      
+10: xor dl, bl                          
+11: dec dl                              
+14: ror dl, 1                           
+16: neg dl                              
+18: xor dl, 0x8e                        
+21: mov dword ptr [esp + edx], eax      
+25: lea ebp, [ebp + 4]                  
+45: xor ebx, edx                        
+-----------------------------------------------------------------------
+0: mov eax, dword ptr [esi]             
+2: add esi, 4                           
+6: xor dl, bl                           
+8: dec dl                               
+9: ror dl, 1                            
+10: neg dl                              
+13: xor dl, 0x8e                        
+16: mov dword ptr [esp + edx], eax      
+22: lea ebp, [ebp + 4]                  
+35: xor ebx, edx                        
+-----------------------------------------------------------------------
+0: mov eax, dword ptr [esi]             
+4: add esi, 4                           
+10: xor dl, bl                          
+12: dec dl                              
+14: ror dl, 1                           
+16: neg dl                              
+18: xor dl, 0x8e                        
+21: mov dword ptr [esp + edx], eax      
+25: add ebp, 4                          
+40: xor ebx, edx                        
+-----------------------------------------------------------------------
+0: mov eax, dword ptr [esi]             
+4: lea esi, [esi + 4]                   
+14: xor dl, bl                          
+16: dec dl                              
+18: ror dl, 1                           
+20: neg dl                              
+21: xor dl, 0x8e                        
+25: test ax, 0x5fe                      
+27: mov dword ptr [esp + edx], eax      
+31: lea ebp, [ebp + 4]                  
+44: xor ebx, edx                        
+-----------------------------------------------------------------------
+0: mov eax, dword ptr [esi]             
+1: add esi, 4                           
+8: xor dl, bl                           
+10: dec dl                              
+11: ror dl, 1                           
+13: neg dl                              
+14: xor dl, 0x8e                        
+18: mov dword ptr [esp + edx], eax      
+19: cwd                                 
+23: lea ebp, [ebp + 4]                  
+37: xor ebx, edx                        
+-----------------------------------------------------------------------
+0: mov eax, dword ptr [esi]             
+4: add esi, 4                           
+10: xor dl, bl                          
+12: dec dl                              
+14: ror dl, 1                           
+16: neg dl                              
+20: xor dl, 0x8e                        
+27: mov dword ptr [esp + edx], eax      
+35: add ebp, 4                          
+46: xor ebx, edx                        
+-----------------------------------------------------------------------
+0: mov eax, dword ptr [esi]             
+2: lea esi, [esi + 4]                   
+6: xor dl, bl                           
+8: dec dl                               
+10: ror dl, 1                           
+14: neg dl                              
+16: xor dl, 0x8e                        
+21: mov dword ptr [esp + edx], eax      
+24: lea ebp, [ebp + 4]                  
+36: xor ebx, edx                        
+-----------------------------------------------------------------------
+0: mov eax, dword ptr [esi]             
+1: test al, 0xee                        
+2: add esi, 4                           
+8: xor dl, bl                           
+10: dec dl                              
+12: ror dl, 1                           
+14: neg dl                              
+16: xor dl, 0x8e                        
+21: mov dword ptr [esp + edx], eax      
+25: lea ebp, [ebp + 4]                  
+40: xor ebx, edx                        
+-----------------------------------------------------------------------
+0: mov eax, dword ptr [esi]             
+2: cwd                                  
+3: lea esi, [esi + 4]                   
+9: xor dl, bl                           
+10: dec dl                              
+12: ror dl, 1                           
+15: neg dl                              
+16: xor dl, 0x8e                        
+20: mov dword ptr [esp + edx], eax      
+25: add ebp, 4                          
+38: xor ebx, edx                        
+-----------------------------------------------------------------------
+6: xor dl, bl                           
+10: rol dl, 1                           
+11: add dl, 0x2f                        
+12: rol dl, 1                           
+15: sub dl, 0x40                        
+19: ror dl, 1                           
+21: not dl                              
+22: rol dl, 1                           
+27: mov eax, dword ptr [esp + edx]      
+29: sub esi, 4                          
+31: mov dword ptr [esi], eax            
+35: add ebp, 4                          
+47: xor ebx, eax                        
+52: lea eax, [esp + 0x60]               
+53: cmp esi, eax                        
+-----------------------------------------------------------------------
+5: xor dl, bl                           
+6: rol dl, 1                            
+9: add dl, 0x2f                         
+11: rol dl, 1                           
+14: sub dl, 0x40                        
+16: ror dl, 1                           
+20: not dl                              
+23: rol dl, 1                           
+29: mov eax, dword ptr [esp + edx]      
+30: test ax, 0x4940                     
+33: lea esi, [esi - 4]                  
+34: mov dword ptr [esi], eax            
+39: lea ebp, [ebp + 4]                  
+46: xor ebx, eax                        
+51: lea eax, [esp + 0x60]               
+52: cmp esi, eax                        
+-----------------------------------------------------------------------
+4: xor dl, bl                           
+7: rol dl, 1                            
+8: add dl, 0x2f                         
+10: rol dl, 1                           
+13: sub dl, 0x40                        
+15: ror dl, 1                           
+17: not dl                              
+18: rol dl, 1                           
+23: mov eax, dword ptr [esp + edx]      
+25: sub esi, 4                          
+28: mov dword ptr [esi], eax            
+31: lea ebp, [ebp + 4]                  
+47: xor ebx, eax                        
+51: lea eax, [esp + 0x60]               
+52: cmp esi, eax                        
+-----------------------------------------------------------------------
+5: xor dl, bl                           
+9: rol dl, 1                            
+11: add dl, 0x2f                        
+15: rol dl, 1                           
+17: sub dl, 0x40                        
+19: ror dl, 1                           
+22: not dl                              
+26: rol dl, 1                           
+33: mov eax, dword ptr [esp + edx]      
+35: sub esi, 4                          
+36: mov dword ptr [esi], eax            
+39: lea ebp, [ebp + 4]                  
+52: xor ebx, eax                        
+57: lea eax, [esp + 0x60]               
+58: cmp esi, eax                        
+-----------------------------------------------------------------------
+6: xor dl, bl                           
+9: rol dl, 1                            
+11: add dl, 0x2f                        
+14: rol dl, 1                           
+17: sub dl, 0x40                        
+18: ror dl, 1                           
+19: not dl                              
+23: rol dl, 1                           
+27: mov eax, dword ptr [esp + edx]      
+29: sub esi, 4                          
+33: mov dword ptr [esi], eax            
+36: lea ebp, [ebp + 4]                  
+45: xor ebx, eax                        
+51: lea eax, [esp + 0x60]               
+52: cmp esi, eax                        
+-----------------------------------------------------------------------
+6: xor dl, bl                           
+7: rol dl, 1                            
+10: add dl, 0x2f                        
+13: rol dl, 1                           
+16: sub dl, 0x40                        
+19: ror dl, 1                           
+23: not dl                              
+27: rol dl, 1                           
+35: mov eax, dword ptr [esp + edx]      
+39: lea esi, [esi - 4]                  
+42: mov dword ptr [esi], eax            
+46: lea ebp, [ebp + 4]                  
+59: xor ebx, eax                       

@@ -1,0 +1,22 @@
+0: mov eax, dword ptr [esi]             
+<eax_w><esi_r><mem_r>
+1: add esi, 4                           
+<esi_r><esi_w>
+8: xor dl, bl                           
+<bl_r><dl_r><dl_w>
+10: dec dl                              
+<dl_r><dl_w>
+11: ror dl, 1                           
+<dl_r><dl_w>
+13: neg dl                              
+<dl_r><dl_w>
+14: xor dl, 0x8e                        
+<dl_r><dl_w>
+18: mov dword ptr [esp + edx], eax      
+<eax_r><edx_r><esp_r><mem_w>
+19: cwd                                 
+<ax_r><ax_w>
+23: lea ebp, [ebp + 4]                  
+<ebp_r><ebp_w>
+37: xor ebx, edx                        
+<ebx_r><ebx_w><edx_r>

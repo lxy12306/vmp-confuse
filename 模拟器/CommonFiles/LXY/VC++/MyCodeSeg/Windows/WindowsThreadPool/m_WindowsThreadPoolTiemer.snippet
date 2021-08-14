@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>WindowsThreadPoolTiemer的使用</Title>
+			<Shortcut>lxyWinThreadPoolTimer</Shortcut> 
+			<Description>WindowsThreadPoolTiemer的使用</Description>
+			<Author>廖星宇</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Code Language="cpp">
+        <![CDATA[
+#include <Windows.h>
+VOID NTAPI Timer_Worker(
+    _Inout_     PTP_CALLBACK_INSTANCE Instance,
+    _Inout_opt_ PVOID                 Context,
+    _Inout_     PTP_TIMER             Timer
+    )
+{
+    //printf("要干的事情");
+}
+
+  PTP_TIMER ptp_timer =  CreateThreadpoolTimer(Timer_Worker, NULL, NULL/*自定义线程池环境 NULL表示默认线程池*/);
+    if (ptp_timer != NULL)
+    {
+        ULARGE_INTEGER ulRelativeStartTime;
+        ulRelativeStartTime.QuadPart = (LONGLONG)-(10000000); //1秒之后进行调用
+        FILETIME ftRelativeStartTimer;
+        ftRelativeStartTimer.dwHighDateTime = ulRelativeStartTime.HighPart;
+        ftRelativeStartTimer.dwLowDateTime = ulRelativeStartTime.LowPart;
+
+        SetThreadpoolTimer(ptp_timer,
+            &ftRelativeStartTimer/*-1表示立即开始 其他负值表示相对事件 正值表示相对1600.1.1开始计算的时间 100纳秒为单位*/,
+            5/*0表示只调用一次，非0值表示再次调用需要等待多少微秒*/,
+            10/*调用时间间隔*/);
+
+        if (IsThreadpoolTimerSet(ptp_timer))
+        {
+            Sleep(1500);//不能依靠WaitForThreadpoolTimerCallbacks 进行阻塞
+            WaitForThreadpoolTimerCallbacks(ptp_timer, true);/*true false一样 这和异步事件的有所不同
+                                                             如果定时器执行没有执行 这个直接返回不会阻塞*/
+            CloseThreadpoolTimer(ptp_timer);
+        }
+        else
+        {
+            //printf("停止计时器");
+            CloseThreadpoolTimer(ptp_timer);
+        }
+
+    }
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

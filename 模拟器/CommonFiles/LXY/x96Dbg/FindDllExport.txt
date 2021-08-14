@@ -1,0 +1,54 @@
+push eax
+
+dwPEDosHeader = 0x793e0000
+dwPEHeader = 0
+dwPEShuJuBiao = 0
+dwPEQuKuaiShuLiang = 0
+dwPEQuKuaiBiao = 0
+dwRvaExportTable = 0
+dwvaDllName = 0
+dwvaExportDllName = 0
+dwvaExportFuncName = 0
+dwExportFuncNumberByName = 0
+
+mov eax,[dwPEDosHeader+0x3c]
+add eax,dwPEDosHeader
+mov dwPEHeader,eax
+
+add eax,0x78
+mov dwPEShuJuBiao,eax
+
+mov eax,[dwPEShuJuBiao]
+add eax,dwPEDosHeader
+mov dwVaExportTable,eax
+
+add eax,0xc
+mov dwvaDllName,[eax]
+add dwvaDllName,dwPEDosHeader
+
+add eax,0xc
+mov dwExportFuncNumberByName,[eax]
+
+add eax,0x8
+mov dwvaExportDllName,[eax]
+add dwvaExportDllName,dwPEDosHeader
+
+push eflags
+while1:
+mov dwvaExportFuncName,[dwvaExportDllName]
+cmp dwExportFuncNumberByName,0
+je while_break
+add dwvaExportFuncName,dwPEDosHeader
+msg 该函数是：{s:dwvaExportFuncName}
+dwvaExportDllName+=0x4
+dwExportFuncNumberByName -= 1
+jmp while1
+while_break:
+pop eflags
+
+
+pop eax
+
+msg "执行完毕"
+
+ret

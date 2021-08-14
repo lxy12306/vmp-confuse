@@ -1,0 +1,2 @@
+0: mov dword ptr [ebp - 0x2c], eax      
+<eax_r><ebp_r><mem_w>

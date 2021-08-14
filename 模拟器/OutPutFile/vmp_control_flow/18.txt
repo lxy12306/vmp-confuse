@@ -1,0 +1,29 @@
+0: sub esi, 1                           
+<esi_r><esi_w>
+3: movzx ecx, byte ptr [esi]            
+<ecx_w><esi_r><mem_r>
+16: xor bl, cl                          
+<bl_r><bl_w><cl_r>
+26: sub esi, 4                          
+<esi_r><esi_w>
+30: mov eax, dword ptr [esi]            
+<eax_w><esi_r><mem_r>
+32: xor eax, ebx                        
+<eax_r><eax_w><ebx_r>
+34: dec eax                             
+<eax_r><eax_w>
+36: rol eax, 3                          
+<eax_r><eax_w>
+39: add eax, 0x459146af                 
+<eax_r><eax_w>
+41: rol eax, 3                          
+<eax_r><eax_w>
+44: xor eax, 0xa7055db                  
+<eax_r><eax_w>
+45: rol eax, 1                          
+<eax_r><eax_w>
+46: bswap eax                           
+<eax_r><eax_w>
+49: add ebp, eax                        
+<eax_r><ebp_r><ebp_w>
+end:: jmp ebp                           

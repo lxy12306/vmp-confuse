@@ -1,0 +1,37 @@
+18: mov edx, 0                          
+<edx_w>
+23: rol esi, 3                          
+<esi_r><esi_w>
+24: add esi, 0x388803ab                 
+<esi_r><esi_w>
+27: not esi                             
+<esi_r><esi_w>
+29: rol esi, 2                          
+<esi_r><esi_w>
+30: xor esi, 0x339265b6                 
+<esi_r><esi_w>
+32: add esi, edx                        
+<edx_r><eflag_w><esi_r><esi_w>
+38: mov ebx, esi                        
+<ebx_w><esi_r>
+42: lea ebp, [0x47b4d3]                 
+<ebp_w>
+44: sub esi, 4                          
+<esi_r><esi_w>
+45: mov eax, dword ptr [esi]            
+<eax_w><esi_r><mem_r>
+48: xor eax, ebx                        
+<eax_r><eax_w><ebx_r>
+49: dec eax                             
+<eax_r><eax_w>
+51: bswap eax                           
+<eax_r><eax_w>
+53: lea eax, [eax + 0x3fb24763]         
+<eax_r><eax_w>
+55: bswap eax                           
+<eax_r><eax_w>
+57: lea eax, [eax + 0x6a1b5303]         
+<eax_r><eax_w>
+61: add ebp, eax                        
+<eax_r><ebp_r><ebp_w><eflag_w>
+end:: jmp ebp                           

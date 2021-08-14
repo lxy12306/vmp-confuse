@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="校验">
+      <UniqueIdentifier>{0c614689-7c11-4f31-81f7-4492bd1e2924}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="memory">
+      <UniqueIdentifier>{dfd34fbd-5ecb-412a-8ae8-7495eb5da9a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="去混淆">
+      <UniqueIdentifier>{e6532d37-b1f2-43bd-859c-e0d3c694eeff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="找系统call">
+      <UniqueIdentifier>{677f8849-bbd9-40c8-8238-ddc4b69e8453}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CommonFile">
+      <UniqueIdentifier>{58c49a19-dde6-462b-8d85-416fc362e0fe}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Framework.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FSInstructionSimilaration.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="memory\LXY_malloc.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="memory\LXY_MemoryOperation.h">
+      <Filter>memory</Filter>
+    </ClInclude>
+    <ClInclude Include="DeConfuse\vmp_to_confuse.h">
+      <Filter>去混淆</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonFiles\LXY\VC++\Exception\MyExceptionWindows.h">
+      <Filter>CommonFile</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonFiles\LXY\VC++\Exception\MyExcetpionCpp.h">
+      <Filter>CommonFile</Filter>
+    </ClInclude>
+    <ClInclude Include="DeConfuse\vmp_to_confirm_correctness_of_deobfuscation.h">
+      <Filter>校验</Filter>
+    </ClInclude>
+    <ClInclude Include="DeConfuse\Mark_vmpcontrol_flow_instruction.h">
+      <Filter>去混淆</Filter>
+    </ClInclude>
+    <ClInclude Include="TeShuZhiLing.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Ctrl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FSInstructionSimilaration.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TEST.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="memory\LXY_MemoryOperation.cpp">
+      <Filter>memory</Filter>
+    </ClCompile>
+    <ClCompile Include="Mian_SystemCallSniff.cpp">
+      <Filter>找系统call</Filter>
+    </ClCompile>
+    <ClCompile Include="DeConfuse\Main_VMP_to_confuse.cpp">
+      <Filter>去混淆</Filter>
+    </ClCompile>
+    <ClCompile Include="DeConfuse\vmp_to_confuse.cpp">
+      <Filter>去混淆</Filter>
+    </ClCompile>
+    <ClCompile Include="DeConfuse\vmp_to_confirm_correctness_of_deobfuscation.cpp">
+      <Filter>校验</Filter>
+    </ClCompile>
+    <ClCompile Include="clean_special_ins.cpp">
+      <Filter>去混淆</Filter>
+    </ClCompile>
+    <ClCompile Include="DeConfuse\Mark_vmpcontrol_flow_instruction.cpp">
+      <Filter>去混淆</Filter>
+    </ClCompile>
+    <ClCompile Include="TeShuZhiLing.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="memory\LXY_malloc_32.asm">
+      <Filter>memory</Filter>
+    </MASM>
+    <MASM Include="memory\LXY_MemoryOperation32_.asm">
+      <Filter>memory</Filter>
+    </MASM>
+  </ItemGroup>
+</Project>

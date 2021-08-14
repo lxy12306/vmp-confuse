@@ -1,0 +1,3 @@
+F:\Code\功能\模拟器\Debug\模拟器.exe
+F:\Code\功能\模拟器\Debug\模拟器.pdb
+F:\WorkStation\模拟器\Debug\模拟器.exe

@@ -1,0 +1,27 @@
+0: mov esp, esi                         
+<esi_r><esp_w>
+1: pop ebp                              
+<ebp_w><esp_r><esp_w>
+3: pop ebx                              
+<ebx_w><esp_r><esp_w>
+6: pop ecx                              
+<ecx_w><esp_r><esp_w>
+7: rdtsc                                
+<eax_w>
+8: shr ax, cl                           
+<ax_r><ax_w><cl_r>
+9: pop esi                              
+<esi_w><esp_r><esp_w>
+10: shrd di, si, 0xbe                   
+<di_r><di_w><si_r>
+11: and ah, 0x6c                        
+<ah_r><ah_w>
+12: popfd                               
+<eflag_w><esp_r><esp_w>
+14: pop edx                             
+<edx_w><esp_r><esp_w>
+15: pop eax                             
+<eax_w><esp_r><esp_w>
+18: pop edi                             
+<edi_w><esp_r><esp_w>
+end:: ret                               

@@ -1,0 +1,256 @@
+;到达EntryPoint
+bpdll scan_core.dll,a,1
+run
+run
+bd
+;禁用所有断点
+
+XiTongDiaoYongCall=0x7b027689
+dwPEDosHeader = 0x7a830000
+bph XiTongDiaoYongCall
+;call eax 系统调用点断点
+
+dwCircleTime = 3
+;循环3次来到IsDebugPreSent
+while_run_to_IsDebugPreSent:
+run
+dec dwCircleTime
+cmp dwCircleTime,0
+jne while_run_to_IsDebugPreSent
+
+bphc XiTongDiaoYongCall
+Sto
+;单步后置eax=0
+mov eax,0
+bph XiTongDiaoYongCall
+run
+
+;干掉CheckRemoteDebuggerPresent
+push eax
+mov eax,[esp+0x8]
+dwRet = eax
+pop eax
+
+bphc XiTongDiaoYongCall
+Sto
+
+push eax
+mov eax,dwRet
+mov [eax],0
+pop eax
+
+bph XiTongDiaoYongCall
+run
+
+;干掉NtQueryInformationProcess
+push eax
+mov eax,[esp+0xc]
+dwRet = eax
+pop eax
+
+bphc XiTongDiaoYongCall
+Sto
+
+mov eax,dwRet
+mov [eax],0
+mov eax,0xC0000353
+
+bph XiTongDiaoYongCall
+run
+
+;GetCurrentThread
+run
+
+;干掉NtSetInformationThread
+mov [esp],0
+run
+
+;干掉NtQuerySystemInformation反内核调试
+push eax
+mov eax,[esp+0x8]
+dwRet = eax
+pop eax
+
+bphc XiTongDiaoYongCall
+Sto
+
+push eax
+mov eax,dwRet
+mov [eax],0x100
+pop eax
+bph XiTongDiaoYongCall
+run
+
+;NtQuerySystemInformation（该函数获取所需缓冲区大小）And LocallAlloc 
+run
+run
+
+;干掉NtQuerySystemInformation反三环调试
+mov [esp+0x8],0
+run
+
+bphc XiTongDiaoYongCall
+
+
+
+;来到CloseHandle反调试
+bph CloseHandle
+run
+run
+;前两个CloseHandle 无效 跳过他
+run 
+bphc CloseHandle
+
+sti
+sti
+sti
+
+dwBpCloseHandleOffset = eip
+dwBpCloseHandleOffset += 41
+;来到调用zwclose  跳过它的运行
+
+bp dwBpCloseHandleOffset
+run
+bc dwBpCloseHandleOffset
+add eip,1
+add eip,6
+
+dwBpCloseHandleOffset+=15
+;来到ret 4
+bp dwBpCloseHandleOffset
+run
+bc dwBpCloseHandleOffset
+mov eax,0
+sto
+;以上过掉了CloseHandle的反调试
+
+bph XiTongDiaoYongCall
+
+push eax
+mov eax,fs:[0x18]
+mov eax,[eax]
+mov eax,[eax+0x4]
+
+dwSehToDetectedHardwareBreakPoint = eax
+;获取SEH检测硬件断点的函数
+pop eax
+bp dwSehToDetectedHardwareBreakPoint
+
+;过硬件断点检测
+PassDetectedHardwareBreakPoint:
+erun
+push eflags
+cmp dwSehToDetectedHardwareBreakPoint,eip
+jne PassedDetectedHardwareBreakPoint
+
+push eax
+mov eax,[esp+0x14]
+mov [eax],0
+mov [eax+4],0
+mov [eax+8],0
+mov [eax+0xc],0
+mov [eax+0x10],0
+mov [eax+0x18],0
+pop eax
+pop eflags
+jmp PassDetectedHardwareBreakPoint
+
+PassedDetectedHardwareBreakPoint:
+;过掉硬件断点检测
+pop eflags
+bpc dwSehToDetectedHardwareBreakPoint
+
+bphc XiTongDiaoYongCall
+
+
+;找到Export_main函数并断下
+push eax
+
+dwPEHeader = 0
+dwPEShuJuBiao = 0
+dwPEQuKuaiShuLiang = 0
+dwPEQuKuaiBiao = 0
+dwRvaExportTable = 0
+dwvaDllName = 0
+dwvaExportDllName = 0
+dwvaExportFuncName = 0
+dwExportFuncNumberByName = 0
+dwPotion = 0
+dwAddressOfNameOrdinals = 0
+dwPositonInAddressOfFunctions=0
+dwAddressOfFunctions = 0
+dwAddressOfThisFunc = 0
+
+mov eax,[dwPEDosHeader+0x3c]
+add eax,dwPEDosHeader
+mov dwPEHeader,eax
+
+add eax,0x78
+mov dwPEShuJuBiao,eax
+
+mov eax,[dwPEShuJuBiao]
+add eax,dwPEDosHeader
+mov dwVaExportTable,eax
+
+add eax,0xc
+mov dwvaDllName,[eax]
+add dwvaDllName,dwPEDosHeader
+
+add eax,0xc
+mov dwExportFuncNumberByName,[eax]
+
+add eax,0x4
+mov dwAddressOfFunctions,[eax]
+add dwAddressOfFunctions,dwPEDosHeader
+
+add eax,0x4
+mov dwvaExportDllName,[eax]
+add dwvaExportDllName,dwPEDosHeader
+
+add eax,0x4
+mov dwAddressOfNameOrdinals,[eax]
+add dwAddressOfNameOrdinals,dwPEDosHeader
+
+
+push eflags
+while1:
+mov dwvaExportFuncName,[dwvaExportDllName]
+cmp dwExportFuncNumberByName,0
+je while_break
+add dwvaExportFuncName,dwPEDosHeader
+find dwvaExportFuncName,4578706F72745F6D61696E,0xc
+cmp $result,0
+je not_Export_main
+;找到Export_main的地址
+push eax
+mov eax,dwAddressOfNameOrdinals
+add eax,dwPotion
+mov ax,[eax]
+mov dwPositonInAddressOfFunctions,ax
+
+mov eax,dwAddressOfFunctions
+dwPositonInAddressOfFunctions*=4
+add eax,dwPositonInAddressOfFunctions
+mov dwAddressOfThisFunc,[eax]
+add dwAddressOfThisFunc,dwPEDosHeader
+
+pop eax
+jmp while_break
+
+
+not_Export_main:
+dwvaExportDllName+=0x2
+dwExportFuncNumberByName -= 1
+dwPotion+=4
+jmp while1
+while_break:
+pop eflags
+
+
+pop eax
+
+bp dwAddressOfThisFunc
+
+run
+
+ret

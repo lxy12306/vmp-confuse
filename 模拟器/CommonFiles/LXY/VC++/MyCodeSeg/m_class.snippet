@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>自己的class模板1</Title>
+			<Shortcut>lxyclass等级1</Shortcut>
+			<Description>类的代码片段</Description>
+			<Author>廖星宇</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>类名</ToolTip>
+					<Default>Test</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="cpp">
+        <![CDATA[class $name$
+{
+	/*友元声明以及using定义*/
+private:
+	/*私有数据成员*/
+
+public:
+	/*公有数据成员*/
+
+public:
+	/*构造函数与析构函数*/
+	$name$() {
+	}
+	~$name$() {
+	}
+public:
+	/*导出函数*/
+private:
+	/*其他非导出功能函数*/
+	$selected$$end$
+};]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

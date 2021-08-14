@@ -1,0 +1,30 @@
+4: xor dl, bl                           
+<bl_r><dl_r><dl_w>
+7: rol dl, 1                            
+<dl_r><dl_w>
+8: add dl, 0x2f                         
+<dl_r><dl_w>
+10: rol dl, 1                           
+<dl_r><dl_w>
+13: sub dl, 0x40                        
+<dl_r><dl_w>
+15: ror dl, 1                           
+<dl_r><dl_w>
+17: not dl                              
+<dl_r><dl_w>
+18: rol dl, 1                           
+<dl_r><dl_w>
+23: mov eax, dword ptr [esp + edx]      
+<eax_w><edx_r><esp_r><mem_r>
+25: sub esi, 4                          
+<esi_r><esi_w>
+28: mov dword ptr [esi], eax            
+<eax_r><esi_r><mem_w>
+31: lea ebp, [ebp + 4]                  
+<ebp_r><ebp_w>
+47: xor ebx, eax                        
+<eax_r><ebx_r><ebx_w>
+51: lea eax, [esp + 0x60]               
+<eax_w><esp_r>
+52: cmp esi, eax                        
+<eax_r><eflag_w><esi_r>

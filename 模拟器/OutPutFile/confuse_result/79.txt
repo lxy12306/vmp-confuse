@@ -1,0 +1,37 @@
+0: mov ecx, dword ptr [edi]             
+<ecx_w><edi_r><mem_r>
+4: mov eax, dword ptr [edi + 4]         
+<eax_w><edi_r><mem_r>
+6: not ecx                              
+<ecx_r><ecx_w>
+9: not eax                              
+<eax_r><eax_w>
+10: and ecx, eax                        
+<eax_r><ecx_r><ecx_w><eflag_w>
+12: mov dword ptr [edi + 4], ecx        
+<ecx_r><edi_r><mem_w>
+13: pushfd                              
+<eflag_r><esp_r><esp_w>
+16: pop dword ptr [edi]                 
+<edi_r><esp_r><esp_w><mem_w>
+18: sub esi, 4                          
+<esi_r><esi_w>
+19: mov ecx, dword ptr [esi]            
+<ecx_w><esi_r><mem_r>
+21: xor ecx, ebx                        
+<ebx_r><ecx_r><ecx_w>
+22: ror ecx, 1                          
+<ecx_r><ecx_w>
+24: not ecx                             
+<ecx_r><ecx_w>
+27: xor ecx, 0x2d460ff0                 
+<ecx_r><ecx_w>
+29: not ecx                             
+<ecx_r><ecx_w>
+30: xor ebx, ecx                        
+<ebx_r><ebx_w><ecx_r>
+31: add ebp, ecx                        
+<ebp_r><ebp_w><ecx_r><eflag_w>
+32: push ebp                            
+<ebp_r><esp_r><esp_w><mem_w>
+end:: ret                               

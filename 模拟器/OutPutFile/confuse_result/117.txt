@@ -1,0 +1,13 @@
+0: xor eax, eax                         
+<eax_r><eax_w>
+1: pop edi                              
+<edi_w><esp_r><esp_w>
+2: pop esi                              
+<esi_w><esp_r><esp_w>
+3: pop ebx                              
+<ebx_w><esp_r><esp_w>
+4: add esp, 0xc0                        
+<esp_r><esp_w>
+5: cmp ebp, esp                         
+<ebp_r><eflag_w><esp_r>
+end:: call 0x411230                     

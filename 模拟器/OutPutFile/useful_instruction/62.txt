@@ -1,0 +1,26 @@
+0: mov ecx, dword ptr [edi]             
+<ecx_w><edi_r><mem_r>
+1: add edi, 4                           
+<edi_r><edi_w>
+9: xor dl, bl                           
+<bl_r><dl_r><dl_w>
+12: not dl                              
+<dl_r><dl_w>
+16: inc dl                              
+<dl_r><dl_w>
+17: not dl                              
+<dl_r><dl_w>
+19: neg dl                              
+<dl_r><dl_w>
+22: inc dl                              
+<dl_r><dl_w>
+23: rol dl, 1                           
+<dl_r><dl_w>
+24: not dl                              
+<dl_r><dl_w>
+26: inc dl                              
+<dl_r><dl_w>
+32: mov dword ptr [esp + edx], ecx      
+<ecx_r><edx_r><esp_r><mem_w>
+57: xor ebx, eax                        
+<eax_r><ebx_r><ebx_w>

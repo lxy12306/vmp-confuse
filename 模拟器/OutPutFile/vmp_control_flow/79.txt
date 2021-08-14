@@ -1,0 +1,19 @@
+18: sub esi, 4                          
+<esi_r><esi_w>
+19: mov ecx, dword ptr [esi]            
+<ecx_w><esi_r><mem_r>
+21: xor ecx, ebx                        
+<ebx_r><ecx_r><ecx_w>
+22: ror ecx, 1                          
+<ecx_r><ecx_w>
+24: not ecx                             
+<ecx_r><ecx_w>
+27: xor ecx, 0x2d460ff0                 
+<ecx_r><ecx_w>
+29: not ecx                             
+<ecx_r><ecx_w>
+31: add ebp, ecx                        
+<ebp_r><ebp_w><ecx_r><eflag_w>
+32: push ebp                            
+<ebp_r><esp_r><esp_w><mem_w>
+end:: ret                               

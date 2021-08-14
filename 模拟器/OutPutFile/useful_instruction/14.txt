@@ -1,0 +1,22 @@
+4: xor cl, bl                           
+<bl_r><cl_r><cl_w>
+6: add cl, 0xd2                         
+<cl_r><cl_w>
+9: neg cl                               
+<cl_r><cl_w>
+12: rol cl, 1                           
+<cl_r><cl_w>
+14: add cl, 0x92                        
+<cl_r><cl_w>
+20: mov dx, word ptr [esp + ecx]        
+<dx_w><ecx_r><esp_r><mem_r>
+21: lea edi, [edi - 2]                  
+<edi_r><edi_w>
+22: mov word ptr [edi], dx              
+<dx_r><edi_r><mem_w>
+44: xor ebx, eax                        
+<eax_r><ebx_r><ebx_w>
+50: lea ecx, [esp + 0x60]               
+<ecx_w><esp_r>
+52: cmp edi, ecx                        
+<ecx_r><edi_r><eflag_w>

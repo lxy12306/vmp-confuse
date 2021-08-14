@@ -1,0 +1,10 @@
+21: lea edi, [edi - 4]                  
+<edi_r><edi_w>
+24: mov dword ptr [edi], ecx            
+<ecx_r><edi_r><mem_w>
+59: xor ebx, eax                        
+<eax_r><ebx_r><ebx_w>
+64: lea ecx, [esp + 0x60]               
+<ecx_w><esp_r>
+66: cmp edi, ecx                        
+<ecx_r><edi_r><eflag_w>

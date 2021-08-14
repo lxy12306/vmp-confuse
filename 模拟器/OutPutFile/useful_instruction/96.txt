@@ -1,0 +1,10 @@
+1: add edi, 4                           
+<edi_r><edi_w>
+5: mov esi, edi                         
+<edi_r><esi_w>
+11: mov edx, 0                          
+<edx_w>
+21: lea ebp, [ebp + 4]                  
+<ebp_r><ebp_w>
+33: xor ebx, ecx                        
+<ebx_r><ebx_w><ecx_r>

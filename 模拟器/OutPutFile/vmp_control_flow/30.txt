@@ -1,0 +1,17 @@
+20: lea esi, [esi - 4]                  
+<esi_r><esi_w>
+23: mov ecx, dword ptr [esi]            
+<ecx_w><esi_r><mem_r>
+27: xor ecx, ebx                        
+<ebx_r><ecx_r><ecx_w>
+30: sub ecx, 0xb845955                  
+<ecx_r><ecx_w>
+32: rol ecx, 1                          
+<ecx_r><ecx_w>
+35: bswap ecx                           
+<ecx_r><ecx_w>
+36: sub ecx, 0x54a5563c                 
+<ecx_r><ecx_w>
+40: add ebp, ecx                        
+<ebp_r><ebp_w><ecx_r>
+end:: jmp ebp                           

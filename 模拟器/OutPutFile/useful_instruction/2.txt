@@ -1,0 +1,32 @@
+0: push esi                             
+<esi_r><esp_r><esp_w><mem_w>
+4: push ecx                             
+<ecx_r><esp_r><esp_w><mem_w>
+6: push eax                             
+<eax_r><esp_r><esp_w><mem_w>
+7: push edi                             
+<edi_r><esp_r><esp_w><mem_w>
+9: push ebp                             
+<ebp_r><esp_r><esp_w><mem_w>
+11: pushfd                              
+<eflag_r><esp_r><esp_w>
+12: btc si, 0xd7                        
+<eflag_w>
+14: push ebx                            
+<ebx_r><esp_r><esp_w><mem_w>
+16: push edx                            
+<edx_r><esp_r><esp_w><mem_w>
+21: push edx                            
+<edx_r><esp_r><esp_w><mem_w>
+22: mov esi, dword ptr [esp + 0x28]     
+<esi_w><esp_r><mem_r>
+33: movsx edi, bp                       
+<bp_r><edi_w>
+35: mov edi, esp                        
+<edi_w><esp_r>
+36: lea esp, [esp - 0xc0]               
+<esp_r><esp_w>
+39: mov eax, 0                          
+<eax_w>
+60: xor ebx, eax                        
+<eax_r><ebx_r><ebx_w>

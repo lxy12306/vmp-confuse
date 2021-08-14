@@ -1,0 +1,69 @@
+0: push esi                             
+<esi_r><esp_r><esp_w><mem_w>
+4: push ecx                             
+<ecx_r><esp_r><esp_w><mem_w>
+6: push eax                             
+<eax_r><esp_r><esp_w><mem_w>
+7: push edi                             
+<edi_r><esp_r><esp_w><mem_w>
+9: push ebp                             
+<ebp_r><esp_r><esp_w><mem_w>
+11: pushfd                              
+<eflag_r><esp_r><esp_w>
+12: btc si, 0xd7                        
+<eflag_w>
+14: push ebx                            
+<ebx_r><esp_r><esp_w><mem_w>
+16: push edx                            
+<edx_r><esp_r><esp_w><mem_w>
+18: mov edx, 0                          
+<edx_w>
+21: push edx                            
+<edx_r><esp_r><esp_w><mem_w>
+22: mov esi, dword ptr [esp + 0x28]     
+<esi_w><esp_r><mem_r>
+23: rol esi, 3                          
+<esi_r><esi_w>
+24: add esi, 0x388803ab                 
+<esi_r><esi_w>
+27: not esi                             
+<esi_r><esi_w>
+29: rol esi, 2                          
+<esi_r><esi_w>
+30: xor esi, 0x339265b6                 
+<esi_r><esi_w>
+32: add esi, edx                        
+<edx_r><eflag_w><esi_r><esi_w>
+33: movsx edi, bp                       
+<bp_r><edi_w>
+35: mov edi, esp                        
+<edi_w><esp_r>
+36: lea esp, [esp - 0xc0]               
+<esp_r><esp_w>
+38: mov ebx, esi                        
+<ebx_w><esi_r>
+39: mov eax, 0                          
+<eax_w>
+42: lea ebp, [0x47b4d3]                 
+<ebp_w>
+44: sub esi, 4                          
+<esi_r><esi_w>
+45: mov eax, dword ptr [esi]            
+<eax_w><esi_r><mem_r>
+48: xor eax, ebx                        
+<eax_r><eax_w><ebx_r>
+49: dec eax                             
+<eax_r><eax_w>
+51: bswap eax                           
+<eax_r><eax_w>
+53: lea eax, [eax + 0x3fb24763]         
+<eax_r><eax_w>
+55: bswap eax                           
+<eax_r><eax_w>
+57: lea eax, [eax + 0x6a1b5303]         
+<eax_r><eax_w>
+60: xor ebx, eax                        
+<eax_r><ebx_r><ebx_w>
+61: add ebp, eax                        
+<eax_r><ebp_r><ebp_w><eflag_w>
+end:: jmp ebp                           

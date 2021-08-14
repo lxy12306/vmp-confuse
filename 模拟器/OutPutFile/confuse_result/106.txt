@@ -1,0 +1,45 @@
+0: mov eax, dword ptr [esi]             
+<eax_w><esi_r><mem_r>
+1: test al, 0xee                        
+<al_r><al_w>
+2: add esi, 4                           
+<esi_r><esi_w>
+6: movzx edx, byte ptr [ebp]            
+<ebp_r><edx_w><mem_r>
+7: lea ebp, [ebp + 1]                   
+<ebp_r><ebp_w>
+8: xor dl, bl                           
+<bl_r><dl_r><dl_w>
+10: dec dl                              
+<dl_r><dl_w>
+12: ror dl, 1                           
+<dl_r><dl_w>
+14: neg dl                              
+<dl_r><dl_w>
+16: xor dl, 0x8e                        
+<dl_r><dl_w>
+18: xor bl, dl                          
+<bl_r><bl_w><dl_r>
+21: mov dword ptr [esp + edx], eax      
+<eax_r><edx_r><esp_r><mem_w>
+23: mov edx, dword ptr [ebp]            
+<ebp_r><edx_w><mem_r>
+25: lea ebp, [ebp + 4]                  
+<ebp_r><ebp_w>
+27: xor edx, ebx                        
+<ebx_r><edx_r><edx_w>
+30: bswap edx                           
+<edx_r><edx_w>
+32: ror edx, 3                          
+<edx_r><edx_w>
+34: xor edx, 0x23354d45                 
+<edx_r><edx_w>
+35: ror edx, 2                          
+<edx_r><edx_w>
+36: add edx, 0x74466ed0                 
+<edx_r><edx_w>
+40: xor ebx, edx                        
+<ebx_r><ebx_w><edx_r>
+43: add edi, edx                        
+<edi_r><edi_w><edx_r><eflag_w>
+end:: jmp edi                           

@@ -1,0 +1,51 @@
+0: mov ecx, dword ptr [edi]             
+1: bswap dx                             
+2: lea edi, [edi + 4]                   
+3: sub esi, 1                           
+4: cbw                                  
+5: movzx edx, byte ptr [esi]            
+6: bsr ax, bp                           
+7: or ax, si                            
+8: xor dl, bl                           
+9: bswap eax                            
+10: mov ah, 0x1a                        
+11: movsx eax, dx                       
+12: not dl                              
+13: mov al, 3                           
+14: movsx eax, di                       
+15: inc dl                              
+16: bts eax, esi                        
+17: not dl                              
+18: neg dl                              
+19: inc dl                              
+20: rol dl, 1                           
+21: not dl                              
+22: mov al, 0xf8                        
+23: lahf                                
+24: inc dl                              
+25: rcr eax, 0x31                       
+26: xor bl, dl                          
+27: adc eax, 0x2d8015a2                 
+28: btc ax, cx                          
+29: rol eax, 0x32                       
+30: mov dword ptr [esp + edx], ecx      
+31: bts ax, ax                          
+32: sar eax, cl                         
+33: lea esi, [esi - 4]                  
+34: mov eax, dword ptr [esi]            
+35: test di, di                         
+36: jmp 0x48cfa1                        
+37: xor eax, ebx                        
+38: bswap eax                           
+39: jmp 0x4909b5                        
+40: neg eax                             
+41: jmp 0x48a5ee                        
+42: dec eax                             
+43: clc                                 
+44: ror eax, 3                          
+45: cmp ax, 0x3339                      
+46: stc                                 
+47: xor eax, 0x3d8d4f70                 
+48: xor ebx, eax                        
+49: add ebp, eax                        
+50: push ebp                            

@@ -1,0 +1,25 @@
+3: lea esi, [esi - 1]                   
+<esi_r><esi_w>
+6: movzx edx, byte ptr [esi]            
+<edx_w><esi_r><mem_r>
+28: xor bl, dl                          
+<bl_r><bl_w><dl_r>
+34: sub esi, 4                          
+<esi_r><esi_w>
+38: mov eax, dword ptr [esi]            
+<eax_w><esi_r><mem_r>
+40: xor eax, ebx                        
+<eax_r><eax_w><ebx_r>
+42: bswap eax                           
+<eax_r><eax_w>
+45: neg eax                             
+<eax_r><eax_w>
+47: dec eax                             
+<eax_r><eax_w>
+49: ror eax, 3                          
+<eax_r><eax_w>
+53: xor eax, 0x3d8d4f70                 
+<eax_r><eax_w>
+60: add ebp, eax                        
+<eax_r><ebp_r><ebp_w><eflag_w>
+end:: jmp ebp                           

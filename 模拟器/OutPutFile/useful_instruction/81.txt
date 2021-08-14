@@ -1,0 +1,18 @@
+0: mov eax, dword ptr [edi]             
+<eax_w><edi_r><mem_r>
+1: mov ecx, dword ptr [edi + 4]         
+<ecx_w><edi_r><mem_r>
+2: not eax                              
+<eax_r><eax_w>
+3: not ecx                              
+<ecx_r><ecx_w>
+6: or eax, ecx                          
+<eax_r><eax_w><ecx_r><eflag_w>
+8: mov dword ptr [edi + 4], eax         
+<eax_r><edi_r><mem_w>
+9: pushfd                               
+<eflag_r><esp_r><esp_w>
+10: pop dword ptr [edi]                 
+<edi_r><esp_r><esp_w><mem_w>
+42: xor ebx, eax                        
+<eax_r><ebx_r><ebx_w>

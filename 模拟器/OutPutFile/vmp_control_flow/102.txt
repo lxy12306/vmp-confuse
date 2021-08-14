@@ -1,0 +1,25 @@
+8: movzx edx, byte ptr [ebp]            
+<ebp_r><edx_w><mem_r>
+10: add ebp, 1                          
+<ebp_r><ebp_w>
+24: xor bl, dl                          
+<bl_r><bl_w><dl_r>
+28: mov edx, dword ptr [ebp]            
+<ebp_r><edx_w><mem_r>
+32: xor edx, ebx                        
+<ebx_r><edx_r><edx_w>
+35: bswap edx                           
+<edx_r><edx_w>
+38: ror edx, 3                          
+<edx_r><edx_w>
+41: xor edx, 0x23354d45                 
+<edx_r><edx_w>
+42: ror edx, 2                          
+<edx_r><edx_w>
+43: add edx, 0x74466ed0                 
+<edx_r><edx_w>
+45: add edi, edx                        
+<edi_r><edi_w><edx_r><eflag_w>
+47: push edi                            
+<edi_r><esp_r><esp_w><mem_w>
+end:: ret                               
